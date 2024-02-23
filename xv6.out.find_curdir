@@ -1,0 +1,10 @@
+
+xv6 kernel is booting
+
+hart 1 starting
+hart 2 starting
+init: starting sh
+$ echo > 95pP1iWS
+$ find . 95pP1iWS
+exec find failed
+$ qemu-system-riscv64: terminating on signal 15 from pid 13861 (make)

@@ -1,8 +1,7 @@
 #include "kernel/types.h"
-#include "kernel/stat.h"
 #include "user/user.h"
 
-/* the time is computed in tick (notion of time of the xv6 kernel) */
+/* time is computed in tick (notion of time of the xv6 kernel) */
 int 
 main(int argc, char *argv[]) {
 char *echoargv[] = { "echo", "no", "argument", "given", 0 };
