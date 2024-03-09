@@ -84,13 +84,6 @@ find(char *path, char *fname)
 
 int
 main(int argc, char *argv[]) {
-  int i;
-
-  /* close(1); */
-  /* int fd = open("output.txt", 1); */
-  /* close(0); */
-  /* dup(fd); */
-  /* dup(fd[0]); */
   for (int i = 1; i < argc; ++i) {
     find(".", argv[i]);
   }
