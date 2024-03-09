@@ -39,17 +39,12 @@ int
 main(int argc, char *argv[]) {
   int p[2];
   pipe(p);
-  int val;
   for(int n = 2; n < 36; ++n) {
     write(p[1], &n, sizeof(int)); // could also be size = 4 or something smaller like uint8;
   }
-  /* while (read(p[0], &val, sizeof(int))) { */
-  /*   printf("%d\n", val); */
-  /* } */
   if (fork() == 0) // generating the first sieve
     new_proc(p);
   close(p[1]);
   wait(0);
-  /* close(p[0]); */  
   exit(1);
 }

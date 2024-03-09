@@ -105,7 +105,6 @@ main(int argc, char *argv[]) {
   c2:	fd840513          	addi	a0,s0,-40
   c6:	00000097          	auipc	ra,0x0
   ca:	2e8080e7          	jalr	744(ra) # 3ae <pipe>
-  int val;
   for(int n = 2; n < 36; ++n) {
   ce:	4789                	li	a5,2
   d0:	fcf42a23          	sw	a5,-44(s0)
@@ -123,9 +122,6 @@ main(int argc, char *argv[]) {
   f4:	fcf42a23          	sw	a5,-44(s0)
   f8:	fee4d0e3          	bge	s1,a4,d8 <main+0x20>
   }
-  /* while (read(p[0], &val, sizeof(int))) { */
-  /*   printf("%d\n", val); */
-  /* } */
   if (fork() == 0) // generating the first sieve
   fc:	00000097          	auipc	ra,0x0
  100:	29a080e7          	jalr	666(ra) # 396 <fork>
@@ -142,7 +138,6 @@ main(int argc, char *argv[]) {
  11e:	4501                	li	a0,0
  120:	00000097          	auipc	ra,0x0
  124:	286080e7          	jalr	646(ra) # 3a6 <wait>
-  /* close(p[0]); */  
   exit(1);
  128:	4505                	li	a0,1
  12a:	00000097          	auipc	ra,0x0
