@@ -91,3 +91,8 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+
+int sys_trace(int mask) {
+  return 0;
+}
